@@ -13,12 +13,13 @@ export async function POST(request: Request) {
       { success: true, data: enquiry },
       { status: 201 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('ENQUIRY API ERROR:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Something went wrong';
     return NextResponse.json(
       { 
         success: false, 
-        error: error.message || 'Something went wrong',
+        error: errorMessage,
         details: error
       },
       { status: 400 }
@@ -35,14 +36,15 @@ export async function GET() {
       { success: true, data: enquiries },
       { status: 200 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error(error);
+    const errorMessage = error instanceof Error ? error.message : 'Something went wrong';
     return NextResponse.json(
       { 
         success: false, 
-        error: error.message || 'Something went wrong' 
+        error: errorMessage
       },
       { status: 400 }
     );
   }
-} 
+}

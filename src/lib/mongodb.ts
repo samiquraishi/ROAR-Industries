@@ -11,14 +11,20 @@ interface MongooseCache {
   promise: Promise<typeof mongoose> | null;
 }
 
+// Augment the NodeJS global type
 declare global {
-  var mongoose: MongooseCache | undefined;
+  namespace NodeJS {
+    interface Global {
+      mongoose: MongooseCache | undefined;
+    }
+  }
 }
 
-const cached = global.mongoose || { conn: null, promise: null };
+// Use type assertion to avoid TypeScript errors
+const cached = (global as any).mongoose || { conn: null, promise: null };
 
-if (!global.mongoose) {
-  global.mongoose = cached;
+if (!(global as any).mongoose) {
+  (global as any).mongoose = cached;
 }
 
 async function connectDB() {

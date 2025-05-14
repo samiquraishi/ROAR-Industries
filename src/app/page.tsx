@@ -1,9 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { CiCircleCheck } from "react-icons/ci";
 import { LiaGgCircle } from "react-icons/lia";
@@ -70,7 +68,7 @@ export default function Home() {
               <DialogContent className="bg-black  rounded-md p-8 w-full max-w-md shadow-2xl backdrop-blur-sm">
                 <DialogHeader className="mb-6">
                   <DialogTitle className="text-2xl text-center font-bold text-white bg-clip-text ">
-                    Let's Connect
+                    Let&apos;s Connect
                   </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-6">
@@ -101,7 +99,7 @@ export default function Home() {
           </h2>
           
           <p className="text-base sm:text-lg md:text-2xl text-gray-400 max-w-2xl sm:max-w-3xl md:max-w-5xl my-6 sm:my-10 mx-auto leading-relaxed">
-            At <span className="font-semibold">ROAR Industries</span>, we don't just embrace innovation—we define it. Founded on the principle that breakthrough solutions require both visionary thinking and meticulous execution, we bring together elite minds in technology, design, and strategy.
+            At <span className="font-semibold">ROAR Industries</span>, we don&apos;t just embrace innovation—we define it. Founded on the principle that breakthrough solutions require both visionary thinking and meticulous execution, we bring together elite minds in technology, design, and strategy.
           </p>
           {/* cards */}
           <div className="pt-8 sm:pt-12 grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-8 md:gap-y-0 w-full mx-auto justify-between">
@@ -124,7 +122,7 @@ export default function Home() {
                   {[
                     "Challenging conventions and pushing boundaries to create solutions that others thought impossible.",
                     "Committed to the highest standards in every project, every interaction, and every line of code we deliver.",
-                    "Creating solutions that don't just work—they transform industries and improve lives across the globe."
+                    "Creating solutions that don&apos;t just work—they transform industries and improve lives across the globe."
                   ][i]}
                 </p>
               </motion.div>
@@ -138,7 +136,7 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.8 }}
             className="text-base sm:text-lg text-gray-400 mt-10 max-w-2xl mx-auto"
           >
-            Our mission is to empower visionaries to transform their boldest ideas into reality. When you partner with ROAR, you're not just getting a service—you're gaining a catalyst for extraordinary achievement.
+            Our mission is to empower visionaries to transform their boldest ideas into reality. When you partner with ROAR, you&apos;re not just getting a service—you&apos;re gaining a catalyst for extraordinary achievement.
           </motion.p>
         </div>
       </motion.section>
