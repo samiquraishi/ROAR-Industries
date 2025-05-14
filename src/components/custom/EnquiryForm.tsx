@@ -42,7 +42,9 @@ export function EnquiryForm({ onSuccess }: { onSuccess?: () => void }) {
       } else {
         toast.error('Failed to submit enquiry. Please try again.');
       }
-    } catch (error) {
+    } catch (err) {
+      // Changed variable name from 'error' to 'err' and actually using it
+      console.error('Error submitting form:', err);
       toast.error('An error occurred. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -115,4 +117,4 @@ export function EnquiryForm({ onSuccess }: { onSuccess?: () => void }) {
       </Button>
     </form>
   );
-} 
+}

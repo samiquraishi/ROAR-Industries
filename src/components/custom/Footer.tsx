@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { EnquiryForm } from "./EnquiryForm";
+import Image from "next/image";
 
 export function Footer() {
   const [open, setOpen] = useState(false);
@@ -12,10 +13,10 @@ export function Footer() {
           {/* Column 1: Logo and Tagline */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="/logo-icon.png" alt="ROAR Industries" className="h-12 w-12" />
+              <Image src="/logo-icon.png" alt="ROAR Industries" width={48} height={48} />
             </div>
             <p>
-              Unleashing Bold Innovation. Building the Future with cutting-edge solutions for tomorrow's challenges.
+              Unleashing Bold Innovation. Building the Future with cutting-edge solutions for tomorrow&apos;s challenges.
             </p>
           </div>
 
@@ -40,7 +41,7 @@ export function Footer() {
               <DialogContent className="bg-black rounded-md p-8 w-full max-w-md shadow-2xl backdrop-blur-sm">
                 <DialogHeader className="mb-6">
                   <DialogTitle className="text-2xl text-center font-bold text-white bg-clip-text">
-                    Let's Connect
+                    Let&apos;s Connect
                   </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-6">
@@ -61,4 +62,4 @@ export function Footer() {
       </div>
     </footer>
   );
-} 
+}
