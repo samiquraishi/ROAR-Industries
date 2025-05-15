@@ -84,8 +84,8 @@ export default function Home() {
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.5 }}
-        transition={{ duration: 0.7 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.2, delay: 0.2 }}
         className="max-w-7xl mx-auto py-12 md:py-20 px-2 sm:px-4 md:px-8 text-center overflow-x-hidden"
       >
         <div className="space-y-10">
@@ -98,7 +98,7 @@ export default function Home() {
             Pioneering Tomorrow, <span className="text-yellow-600">Today</span>
           </h2>
           
-          <p className="text-base sm:text-lg md:text-2xl text-gray-400 max-w-2xl sm:max-w-3xl md:max-w-5xl my-6 sm:my-10 mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl sm:max-w-3xl md:max-w-5xl my-6 sm:my-10 mx-auto leading-relaxed">
             At <span className="font-semibold">ROAR Industries</span>, we don&apos;t just embrace innovation—we define it. Founded on the principle that breakthrough solutions require both visionary thinking and meticulous execution, we bring together elite minds in technology, design, and strategy.
           </p>
           {/* cards */}
@@ -107,8 +107,8 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, x: i === 0 ? -50 : i === 2 ? 50 : 0 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false }}
-                transition={{ duration: 0.5, delay: 0.2 + i * 0.2 }}
+                viewport={{ once: false, amount: 0.8 }}
+                transition={{ duration: 0.8, delay: 0.2 + i * 0.2 }}
                 className="bg-white shadow-md hover:shadow-lg transition-shadow h-72 sm:h-80 md:h-96 w-full flex flex-col items-center justify-center px-4 sm:px-8"
                 key={skill.title}
               >
@@ -130,10 +130,10 @@ export default function Home() {
           </div>
           {/* mission statement */}
           <motion.p
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 1 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: false }}
-            transition={{ duration: 0.7, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-base sm:text-lg text-gray-400 mt-10 max-w-2xl mx-auto"
           >
             Our mission is to empower visionaries to transform their boldest ideas into reality. When you partner with ROAR, you&apos;re not just getting a service—you&apos;re gaining a catalyst for extraordinary achievement.
@@ -157,10 +157,10 @@ export default function Home() {
                 opacity: 1,
                 x: 0
               }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{
-                duration: 0.8,
-                delay: i * 0.2,
+                duration: 0.5,
+                delay: i * 0.02,
                 ease: "easeOut"
               }}
               className="w-full max-w-5xl mx-auto bg-white shadow-xl border border-neutral-200 flex flex-row items-center h-64 md:h-72 px-12 md:px-20 justify-between text-left"
